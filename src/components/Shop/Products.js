@@ -4,22 +4,28 @@ import classes from "./Products.module.css";
 const Products = (props) => {
   const foodItems = [
     {
-      id: 1,
-      title: "Pizza",
-      description: "Delicious pizza with various toppings.",
+      itemId: 1,
       price: 12.99,
+      quantity: 1,
+      totalPrice: 12.99,
+      description: "this is a random product",
+      name: "Pizza",
     },
     {
-      id: 2,
-      title: "Burger",
-      description: "Juicy burger with cheese and veggies.",
+      itemId: 2,
       price: 8.49,
+      quantity: 1,
+      totalPrice: 8.49,
+      description: "this is a random product",
+      name: "Burger",
     },
     {
-      id: 3,
-      title: "Spaghetti Carbonara",
-      description: "Classic Italian pasta with bacon and eggs.",
+      itemId: 3,
       price: 14.99,
+      quantity: 1,
+      totalPrice: 14.99,
+      description: "this is a random product",
+      name: "Spaghetti Carbonara",
     },
   ];
 
@@ -29,8 +35,8 @@ const Products = (props) => {
       <ul>
         {foodItems.map((item) => (
           <ProductItem
-            key={item.id}
-            title={item.title}
+            key={item.itemId}
+            title={item.name}
             price={item.price}
             description={item.description}
           />

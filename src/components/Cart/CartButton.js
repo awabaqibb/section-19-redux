@@ -3,6 +3,7 @@ import classes from "./CartButton.module.css";
 import { useSelector, useDispatch } from "react-redux";
 
 const CartButton = (props) => {
+  const itemsAmount = useSelector((state) => state.cartChanger.itemsAmount);
   const dispatch = useDispatch();
 
   const showCartHandler = (params) => {
@@ -12,7 +13,7 @@ const CartButton = (props) => {
   return (
     <button onClick={showCartHandler} className={classes.button}>
       <span>My Cart</span>
-      <span className={classes.badge}>1</span>
+      <span className={classes.badge}>{itemsAmount}</span>
     </button>
   );
 };
