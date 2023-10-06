@@ -8,7 +8,6 @@ const cartSlice = createSlice({
   reducers: {
     toggle(state) {
       state.showCart = !state.showCart;
-      console.log(state.showCart);
     },
   },
 });
